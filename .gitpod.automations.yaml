@@ -7,6 +7,7 @@ tasks:
             unzip awscliv2.zip
             sudo ./aws/install
             cd $THEIA_WORKSPACE_ROOT
+            echo -e "Copy and paste the following into terminal with AWS credentials: \nAWS_ACCESS_KEY_ID=[Replace with Access Key] \nexport AWS_SECRET_ACCESS_KEY=[Replace with Secret Key] \nexport AWS_REGION=us-east-1"
         triggeredBy:
             - postEnvironmentStart
 
