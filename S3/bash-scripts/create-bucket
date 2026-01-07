@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Require at least 2 arguments: bucket name and region
+if [ $# -lt 2 ]; then
+    echo "Usage: $0 <bucket-name> <region>"
+    exit 1
+fi
+
+bucket_name="$1"
+region="$2"
+
+echo "Bucket name: $bucket_name"
+echo "Region: $region"
+
+
+
+echo "aws s3api create-bucket --bucket $bucket_name --region $region"
+
+aws s3api create-bucket --bucket $bucket_name --region $region
+
